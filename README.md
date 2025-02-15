@@ -16,7 +16,7 @@ Este sistema foi desenvolvido como parte da disciplina "Construção de APIs par
 A API oferece dois endpoints principais:
 
 1.  **Detecção de Idioma:** Identifica o idioma de um texto fornecido. 🗣️
-2.  **Análise de Sentimentos:** Analisa o sentimento de um texto (positivo, negativo ou neutro) e fornece scores de polaridade e subjetividade. 🤔
+2.  **Análise de Sentimentos:** Analisa o sentimento de um texto (positivo, negativo ou neutro) e fornece scores de polaridade e subjetividade. 🤔 **(Atualmente, a análise de sentimentos suporta apenas o idioma inglês.)**
 
 Para uma documentação detalhada da API, incluindo arquitetura, configuração, endpoints e mecanismos de IA, consulte o arquivo [DOCUMENTATION.md](DOCUMENTATION.md).
 
