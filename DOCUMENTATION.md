@@ -10,7 +10,7 @@ Este projeto consiste em uma API RESTful construída com FastAPI, projetada para
     -   **Mecanismo de Detecção de Idioma**: A detecção de idioma é realizada utilizando a biblioteca `langdetect`. Esta biblioteca utiliza uma abordagem estatística para identificar o idioma de um texto, analisando padrões de caracteres e palavras. É eficaz para identificar idiomas em textos de tamanho considerável, mas pode ter limitações com textos muito curtos ou ambíguos.
 
 2.  **Análise de Sentimentos**: Analisa o sentimento de um texto, classificando-o como positivo, negativo ou neutro, além de fornecer scores de polaridade e subjetividade.
-    -   **Mecanismo de Análise de Sentimentos**: A análise de sentimentos é implementada com a biblioteca `TextBlob`. TextBlob utiliza uma abordagem baseada em léxico, onde cada palavra no texto é avaliada com base em um dicionário de sentimentos. A polaridade do sentimento varia de -1 (negativo) a 1 (positivo), e a subjetividade de 0 (objetivo) a 1 (subjetivo). A classificação geral do sentimento (positivo, negativo, neutro) é derivada da polaridade.
+    -   **Mecanismo de Análise de Sentimentos**: A análise de sentimentos é implementada com a biblioteca `TextBlob`. TextBlob utiliza uma abordagem baseada em léxico, onde cada palavra no texto é avaliada com base em um dicionário de sentimentos. A polaridade do sentimento varia de -1 (negativo) a 1 (positivo), e a subjetividade de 0 (objetivo) a 1 (subjetivo). A classificação geral do sentimento (positivo, negativo, neutro) é derivada da polaridade. **Atualmente, a análise de sentimentos suporta apenas o idioma inglês.**
 
 ## Mecanismos de IA Detalhados
 
@@ -43,7 +43,7 @@ Para a análise de sentimentos, a API emprega a biblioteca `TextBlob`. O mecanis
     -   Negativo: polaridade < -0.2
     -   Neutro: polaridade entre -0.2 e 0.2
 
-Este método é eficaz para muitas aplicações, mas pode ter limitações em contextos mais complexos, como sarcasmo ou ironia, onde a análise baseada em léxico pode não capturar as nuances do sentimento.
+Este método é eficaz para muitas aplicações, mas pode ter limitações em contextos mais complexos, como sarcasmo ou ironia, onde a análise baseada em léxico pode não capturar as nuances do sentimento. **Além disso, o modelo atual suporta apenas o idioma inglês.**
 
 ## Arquitetura
 
@@ -175,13 +175,30 @@ Um arquivo `.env.example` é fornecido como modelo.
 
 ## Testes
 
-Para executar os testes automatizados, utilize pytest:
+Os testes automatizados da API são implementados usando a biblioteca `pytest`. O arquivo principal de testes é `tests/test_endpoints.py`.
+
+Para executar os testes, utilize o comando:
 
 ```bash
 pytest tests/test_endpoints.py
 ```
+Certifique-se de ter o `pytest` e as outras dependências de teste instaladas (listadas em `requirements.txt`).
 
-Certifique-se de ter as dependências de teste instaladas (`pytest` e `requests` em `requirements.txt`).
+Os testes funcionam da seguinte maneira:
+
+1.  **Arquivo `tests/test_phrases.txt`:**
+    *   Contém as frases de teste, divididas em blocos `[language]` (detecção de idioma) e `[sentiment]` (análise de sentimentos).
+    *   O formato das linhas varia de acordo com o bloco (detalhes no próprio arquivo).
+    *   Novas frases podem ser adicionadas seguindo o formato especificado.
+
+2.  **Arquivo `tests/test_endpoints.py`:**
+    *   Lê o arquivo `tests/test_phrases.txt`.
+    *   Processa cada bloco e cada frase.
+    *   Faz requisições à API para cada frase.
+    *   Compara os resultados da API com os resultados esperados (definidos no arquivo `tests/test_phrases.txt`).
+    *   Exibe os resultados na tela (frase, expectativa, resultado real).
+    *   Há um tratamento de exceção para um falso positivo conhecido na análise de sentimentos.
+
 
 ## Segurança
 
@@ -197,4 +214,3 @@ A aplicação utiliza logging para registrar informações e erros. A configura�
 ## Próximos Passos
 
 -   Melhorar a precisão da detecção de idioma e análise de sentimentos, possivelmente integrando modelos de IA mais avançados.
-

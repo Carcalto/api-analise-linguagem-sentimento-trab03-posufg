@@ -1,0 +1,39 @@
+[language]
+This is a test sentence.;en
+Olá, este é um teste.;pt
+Esta es una prueba.;es
+The children played in the garden all afternoon.;en
+This new smartphone features cutting-edge technology.;en
+She baked a delicious chocolate cake for the party.;en
+Los estudiantes aprenden matemáticas en la biblioteca.;es
+Mi hermano trabaja en una empresa de tecnología.;es
+El restaurante sirve comida tradicional española.;es
+Les oiseaux chantent dans le jardin ce matin.;fr
+J'aime voyager en train à travers la France.;fr
+Le professeur explique l'histoire aux élèves.;fr
+Die Katze schläft auf dem Sofa.;de
+Meine Schwester studiert Medizin an der Universität.;de
+Der Bäcker macht frisches Brot jeden Morgen.;de
+I bambini giocano nel parco con la palla.;it
+Mia madre cucina la pasta tutti i giorni.;it
+Il museo è chiuso il lunedì mattina.;it
+
+[sentiment]
+I love this product!;positive;0.5;0.6
+This is terrible.;negative;-0.8;0.9
+The sky is blue.;neutral;0.0;0.0
+I'm thrilled with my recent promotion at work, it's a dream come true!;positive;0.8;0.7
+The sunset today was absolutely breathtaking, filled me with joy.;positive;0.9;0.8
+Spending time with my family during the holidays makes me incredibly happy.;positive;0.85;0.75
+Successfully completed my first marathon, feeling proud and accomplished!;positive;0.7;0.6
+This is the best birthday celebration I've ever had, surrounded by loved ones.;positive;0.9;0.8
+Lost my phone and all my important data, this day is a complete disaster.;negative;-0.9;0.9
+The service at this restaurant was horrible, I'm never coming back.;negative;-0.7;0.8
+Failed my driving test again, feeling utterly disappointed and frustrated.;negative;-0.8;0.9
+The constant noise from construction is driving me insane, I can't focus.;negative;-0.6;0.7
+My vacation was ruined by terrible weather and flight cancellations.;negative;-0.9;0.95
+The weather forecast indicates rain for tomorrow morning.;neutral;0.0;0.1
+The train departs from platform 3 at 2:30 PM.;neutral;0.0;0.1
+This book contains 250 pages and was published in 2022.;neutral;0.0;0.1
+The supermarket is open from Monday to Saturday.;neutral;0.0;0.1
+The conference will be held in Room 401 of the main building.;neutral;0.0;0.1
