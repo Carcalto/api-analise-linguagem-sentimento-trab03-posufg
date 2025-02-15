@@ -1,0 +1,41 @@
+# Requisitos do Projeto API de IA
+
+# Seção para dependências da API (FastAPI e Uvicorn)
+# FastAPI é um framework web moderno e rápido para construir APIs
+# Uvicorn é um servidor ASGI para executar aplicações FastAPI
+# python-dotenv para carregar variáveis de ambiente do arquivo .env
+# pydantic para validação de dados e settings management
+# typing-extensions para suporte a recursos de typing mais recentes
+# starlette é o framework base do FastAPI
+
+# Dependências da API
+fastapi>=0.65.2,<0.66.0
+uvicorn>=0.14.0,<0.15.0
+python-dotenv>=0.19.0,<0.20.0
+pydantic>=1.8.2,<1.9.0
+typing-extensions>=3.10.0,<4.0.0
+starlette>=0.14.2,<0.15.0
+
+# Seção para dependências de segurança
+# python-jose para operações com JSON Object Signing and Encryption (JOSE) em Python
+# passlib para hashing de senhas de forma segura
+
+# Dependências de Segurança
+python-jose>=3.3.0,<3.4.0
+passlib>=1.7.4,<1.8.0
+
+# Seção para dependências de Processamento de Linguagem Natural (NLP)
+# textblob é uma biblioteca Python para processamento de texto, incluindo análise de sentimentos
+# langdetect para detecção de idiomas
+
+# Dependências de NLP
+textblob>=0.15.3,<0.16.0
+langdetect>=1.0.9,<1.1.0
+
+# Seção para dependências de teste
+# pytest é um framework para construir e executar testes
+# requests é uma biblioteca para fazer requisições HTTP
+
+# Dependências de Teste
+pytest>=6.2.5,<6.3.0
+requests>=2.26.0,<2.27.0
